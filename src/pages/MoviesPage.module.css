@@ -1,0 +1,148 @@
+.header {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 24px 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .searchInput {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .searchButton,
+  .resetButton {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  position: relative;
+  right: -30px;
+  width: 0;
+  background: #fff;
+  border: 0;
+  border-radius: 3px;
+  transition: width 0.3s ease, border-radius 0.3s ease;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.searchInput:focus {
+  outline: none;
+  cursor: text;
+}
+
+.search.opened .searchInput {
+  right: 0;
+  display: block;
+  width: 20rem;
+  border-radius: 3px;
+  padding: 6.64px;
+}
+
+.searchButton {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2532bc;
+  color: white;
+  border: none;
+  padding: 3.69px 8px;
+  margin-left: 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.searchButton:hover {
+  background-color: #4950a5;
+}
+
+.resetButton {
+  background-color: #2532bc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resetButton:hover {
+  background-color: #4950a5;
+}
+
+.resetButton:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 2, 65, 0.674) 0%,
+    rgba(87, 0, 137, 1) 50%,
+    rgba(10, 0, 22, 0.674)
+  );
+  padding: 30px 0;
+  margin-top: 25px;
+  font-size: 23px;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.744);
+}
+
+.retryButton {
+  margin: 0 auto;
+  width: 68px;
+  background-color: #ff5c00;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(234, 106, 63, 0.587);
+}
+
+.retryButton:hover {
+  background-color: #ff7700;
+}
+
+.retryButton:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
